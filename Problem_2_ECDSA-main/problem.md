@@ -1,6 +1,6 @@
 # ECDSA FORGERY
 
-- Namespace: picoctf/examples
+- Namespace: picoctf/18739f24
 - ID: ECDSA
 - Type: custom
 - Category: Cryptography
