@@ -3,28 +3,28 @@
 
 ## Overview
 
+This problem serves as a game version of Zero Knowledge Proofs. These cryptosystems are built on the discrete log problem. This CTF is used to demonstrate how to Zero knowledge proofs can be used to communicate secrets without transmitting the secret itself. The setup is slightly altered to more of a game format that prompts the player to work with the server to prove that the information the user provides (verifier) is correct without ever giving anything but a public key. 
 
 
-. This problem is adapted from the live picoGym problem, [Picker-I](insert server code http link here).
 
 * Please refer to the problem.md file for more notes on the problem itself, or the direct notes left for posterity on the jupyter notebook 
 
 ### File Listing
 
-1. [picker-I.py](/example-problems/reversing-python/picker-I.py) this is the
-   vulnerable script that is hosting as a digital signature service on this container.
+1. [picker-I.py] this is the
+   vulnerable script that is hosting ZKP service on this container.
 
-2. [start.sh](/example-problems/reversing-python/start.sh) starts a listener
+2. [start.sh] starts a listener
    that receives connections. This script is ran as the last step in the
    Dockerfile. For this problem, we use socat to connect the output of our
    vulnerable script to a port, allowing users to interact with our script
    through the network.
 
-3. [setup-challenge.py](/example-problems/reversing-python/setup-challenge.py)
+3. [setup-challenge.py] 
    This script generates the flag for the problem and saves it in the important
    file, `/challenge/metadata.json`, which is required for every cmgr problem.
 
-4. [Dockerfile](/example-problems/reversing-python/Dockerfile) this is the main
+4. [Dockerfile]  this is the main
    setup for our problem. We pull down a pinned Ubuntu image, update it and
    install the required packages. We create the `/challenge` directory with
    specific permissions so only root can access it. `/challenge` is an
