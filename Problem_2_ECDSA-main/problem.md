@@ -14,6 +14,8 @@ There is a service accepting input using elliptic curve based digital signature.
 
 * This is based off of an actual security vulnerability SONYECDSA vulnerability in 2013
 
+* {{url_for("picker-I.py", "Code here")}}
+
 ## Details
 
 
@@ -85,4 +87,4 @@ Examining source code to identify functionality
 ## Attributes
 
 - author: Zachary Zdobinski organization: CMU
-- event: N/A
+- event: 18739 CTF
